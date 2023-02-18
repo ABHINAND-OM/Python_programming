@@ -1,0 +1,35 @@
+class bank:
+    def _init_(self):
+        self.balance=0
+        print("---create newaccount---")
+        self.name=input("enter name:")
+        self.accno=int(input("enter account number :"))
+        self.actype=input("enter the type of account:")
+    def deposit(self):
+        self.amount=int(input("enter the amount to be deposit:"))
+        self.balance=self.balance+self.amount
+        print("amount deposited:",self.amount)
+    def withdraw(self):
+        self.amount=int(input("enter the amount to be withdraw:"))
+        if(self.balance>=self.amount):
+            self.balance=self.balance-self.amount
+            print("amount withdrawn:",self.amount)
+        else:
+            print("insufficient balance:")
+    def display(self):
+        print("balance is:",self.balance)
+
+a=bank()
+a._init_()
+while(1):
+    print("\n 1.deposit \n 2.withdraw \n 3.balance \n 4.exit\n")
+    ch=int(input("enter your choice :"))
+    if(ch==1):
+        a.deposit()
+    elif(ch==2):
+        a.withdraw()
+    elif(ch==3):
+        a.display()
+    else:
+        print("wrong choice!!")
+        exit()
