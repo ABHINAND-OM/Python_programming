@@ -1,0 +1,11 @@
+stud={}
+n=int(input("enter the number of students:"))
+for i in range(0,n):
+    a=input("enter name:")
+    stud[a]=int(input("enter the mark:"))
+print(stud)
+b=[]
+b+=(stud.keys())
+b.sort()
+for i in range(0,n):
+    print(b[i],stud[b[i]])
