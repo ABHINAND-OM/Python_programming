@@ -1,0 +1,12 @@
+n=int(input("enter the number of students:"))
+studlist=[]
+for i in range(0,n):
+	stud={}
+	stud['name']=input("enter name:")
+	stud['branch']=input("enter the branch:")
+	stud['rollno']=int(input("enter rollnumber:"))
+	studlist.append(stud)
+
+print(" name branch rollno")
+for i in range(0,n):
+	print(studlist[i])
